@@ -23,41 +23,40 @@
 
         <h1>Поиск гостиницы по параметрам</h1>
 
-        <img src="#" width="1200" height="217" alt="картинка <WELCOM to the SEDONA>">
+        <img src="#" width="1200" height="217" alt="картинка WELCOM to the SEDONA">
 
           <section>
             <h2>Фильтр</h2>
-            <form action="#" method="POST">
-            <div>
-             <p>ИНФРАСТРУКТУРА</p>
+            <form action="https://echo.htmlacademy.ru/" method="POST">
+              <div>
+              <p>ИНФРАСТРУКТУРА</p>
               <label><input type="checkbox" name="swim_pool" checked>Бассейн</label><br>
               <label><input type="checkbox" name="park_ing">Паровка</label><br>
               <label><input type="checkbox" name="wi-fi">WI-FI</label>
-            </div>
+              </div>
 
-            <div>
+              <div>
               <p>ТИП ЖИЛЬЯ</p>
               <label><input type="checkbox" name="aaa" checked>Гостиница</label><br>
               <label><input type="checkbox" name="bbb" checked>Мотель</label><br>
               <label><input type="checkbox" name="wi-fi" checked>Апарты</label>
-            </div>
+              </div>
 
-            <div>
-              <p>СТОИМОСТЬ В СУТКИ (Р):</p>
               <div>
-                <label>от<input type="text" name="min-price" value="0"></label>
-                <label>до<input type="text" name="max-price" value="3000"></label><br>
-              </div>
-              <input type="range" id="price" name="price" min="0" max="4000" value="3000" step="100"><br> 
-              <!-- не нашла, как сделать двойной бегунок. Пока только разметила место под него.                      
-              <button><a href="https://echo.htmlacademy.ru/"></a>Показать</button> -->
+                <p>СТОИМОСТЬ В СУТКИ (Р):</p>
+                <input type="text" value="0">
+                <input type="text" value="3000">
+                <button>левый бегунок</button>
+                <button>правый бегунок </button>
               
-              <div class="buttons">
+                <div class="line"><img src="rectangle.svg" width="158" height="2" alt="шкала цены"></div> 
+            
+                <div class="buttons">
                 <input type="submit" value="Показать"><a href="https://echo.htmlacademy.ru/"></a>
+                </div>
               </div>
-            </div>
-          </form>
-        </section>
+            </form>
+          </section>
 
           <section>
             <h2>Сортировка жилья по критериям</h2>
@@ -65,28 +64,25 @@
             <div>
               <p>СОРТИРОВКА</p>
               <ul>
-                  <li>по цене</li>
-                  <li>по типу</li>
-                  <li>по рейтингу</li>
+                  <li><a href="blank.html">по цене</a></li>
+                  <li><a href="blank.html">по типу</a></li>
+                  <li><a href="blank.html">по рейтингу</a></li>
               </ul>
             </div>
             <div>
-            <button type="button" disabled><img src="icon_up.svg" width="11" height="10" alt="стрелка вверх">вверх</button>
-            <button type="button"><img src="icon_down.svg" width="11" height="10" alt="стрелка вних">вниз</button>
+            <button type="button" disabled><a href="blank.html">вверх</a></button>
+            <button type="button"><a href="blank.html">вниз</a></button>
             </div>
           </section>
 
           <section>
             <h2>Варианты</h2>
-            <figure> 
               <img src="image.png" width="135" height="90" alt="фото гостиницы">
-              <figcaption> <b> AMARA RESORT & SPA </b>
+              <a href="blank.html"><b> AMARA RESORT & SPA </b></a>
               <p> ГОСТИНИЦА </p>
               <p> ОТ 4000 Р.</p>
-              </figcaption>
-            </figure>
-            <button type="button">ПОДРОБНЕЕ</button>
-            <button type="submit">ЗАБРОНИРОВАТЬ</button>
+            <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+            <button type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
             <div>
               <ul>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
@@ -97,15 +93,12 @@
             </div>
             <div> <p> РЕЙТИНГ: 8,5 </p></div>
 
-            <figure> 
               <img src="image.png" width="135" height="90" alt="фото мотеля">
-              <figcaption> <b> DESERT QUAIL INN </b>
+              <a href="blank.html"><b> DESERT QUAIL INN </b></a>
               <p> МОТЕЛЬ </p>
               <p> ОТ 3000 Р.</p>
-              </figcaption>
-            </figure>
-            <button type="button">ПОДРОБНЕЕ</button>
-            <button type="submit">ЗАБРОНИРОВАТЬ</button>
+              <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+              <button type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
             <div>
               <ul>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
@@ -115,15 +108,12 @@
             </div>
             <div> <p> РЕЙТИНГ: 8,9 </p></div>
 
-            <figure> 
               <img src="image.png" width="135" height="90" alt="фото апартаментов">
-              <figcaption> <b> VILLAS AT POCO DIABLO </b>
+              <a href="blank.html"><b> VILLAS AT POCO DIABLO </b></a>
               <p> АПАРТАМЕНТЫ </p>
               <p> ОТ 2000 Р.</p>
-              </figcaption>
-            </figure>
-            <button type="button">ПОДРОБНЕЕ</button>
-            <button type="submit">ЗАБРОНИРОВАТЬ</button>
+              <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+              <button type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
             <div>
               <ul>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
