@@ -1,116 +1,120 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"> <!-- прописать PT Sans в font-family в style кастомных свойств -->
+    <!-- <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css"> -->
 
-    <header>
-      <nav>
-        <a>
+  </head>
+  <body class="body">
+
+    <header class="header">
+      <nav class="main-navigation">
+        <a class="header-logo">
           <img src="img/index-logo.svg" width="138" height="70" alt="Логотип сайта «City of Sedona»">
         </a>
-        <ul>
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и Видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
-          <li><a href="blank.html">Гостиницы</a></li>
+        <ul class="site-navigation">
+          <li><a class="block-left" href="blank.html">Информация</a></li>
+          <li><a class="block-left" href="blank.html">Фото и Видео</a></li>
+          <li><a class="block-right" href="blank.html">Карта штата</a></li>
+          <li><a class="block-right" href="blank.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <img src="#" width="1200" height="509" alt="картинка <WELCOM to the gorgeous SEDONA> ">
-                
+    <main class="container">
+      <img class="main-photo" src="#" width="1200" height="509" alt="картинка <WELCOM to the gorgeous SEDONA> ">
+
       <section>
         <h1>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ,<br>
           ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h1>
-          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+          <p class="subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
 
-      <section>
+      <section class="reason-1">
         <h2>Причина 1</h2>
-        <p>НАСТОЯЩИЙ<br> ГОРОДОК</p>
-        <p> №1 </p>
-        <p>Седона - не аттракцион для туристов, там<br>
+        <p class="reason-heading-white">НАСТОЯЩИЙ<br> ГОРОДОК</p>
+        <p class="reason-number-white"> №1 </p>
+        <p class="description-white">Седона - не аттракцион для туристов, там<br>
           течет своя жизнь</p>
-          <img src="#" alt="фото местности">
+          <img class="photo-right" src="#" alt="фото местности">
       </section>
 
-      <section>
+      <section class="menu">
         <h2>Меню сайта</h2>
-        <ul>
-          <li>
-            <img src="icon_home.svg" width="75" height="72" alt="иконка жилье">
-            <p>ЖИЛЬЕ</p>
-            <p>Рукомендуем пожить в настоящем<br>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <img class="icon" src="icon_home.svg" width="75" height="72" alt="иконка жилье">
+            <p class="menu-item-name">ЖИЛЬЕ</p>
+            <p class="description-black">Рукомендуем пожить в настоящем<br>
               мотеле, все как в кино!</p>
           </li>
 
-          <li>
-            <img src="icon_burger.svg" width="75" height="70" alt="иконка еда">
-            <p>ЕДА</p>
-            <p>Всегда заказывайте фирменный бургер,<br>
+          <li class="menu-item">
+            <img class="icon" src="icon_burger.svg" width="75" height="70" alt="иконка еда">
+            <p class="menu-item-name">ЕДА</p>
+            <p class="description-black">Всегда заказывайте фирменный бургер,<br>
               вы не разочаруетесь!</p>
           </li>
 
-          <li>
-            <img src="icon_gift.svg" width="64" height="77" alt="иконка сувениры">
-            <p>СУВЕНИРЫ</p>
-            <p>Не только китайского, но и местного <br> производства!</p>
+          <li class="menu-item">
+            <img class="icon" src="icon_gift.svg" width="64" height="77" alt="иконка сувениры">
+            <p class="menu-item-name">СУВЕНИРЫ</p>
+            <p class="description-black">Не только китайского, но и местного <br> производства!</p>
           </li>
         </ul>
       </section>
 
-      <section>
-        <h2>Причина 2</h2>        
-        <img src="#" alt="фото природы">
-        <p>ТАМ ЕСТЬ<br> МОСТ ДЬЯВОЛА</p>
-        <p> №2 </p>
-        <p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+      <section class="reason-2">
+        <h2>Причина 2</h2>
+        <img class="photo-left" src="#" alt="фото природы">
+        <p class="reason-heading-white">ТАМ ЕСТЬ<br> МОСТ ДЬЯВОЛА</p>
+        <p class="reason-number-white"> №2 </p>
+        <p class="description-white">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
       </section>
 
-      <section>
+      <section class="reason-3-4-5">
         <h2>Причины 3-5</h2>
         <ul>
           <li>
-            <p>НЕБОЛЬШАЯ <br> ПЛОЩАДЬ</p>
-            <p> №3 </p>
-            <p>Все достопримечательности<br>
+            <p class="reason-heading-black">НЕБОЛЬШАЯ <br> ПЛОЩАДЬ</p>
+            <p class="reason-number-black"> №3 </p>
+            <p class="description-black">Все достопримечательности<br>
               находятся очень близко</p>
           </li>
           <li>
-            <p>КРАСИВАЯ <br> ДОРОГА</p>
-            <p> №4 </p>
-            <p>Ехать из Лас-Вегаса совсем<br>
+            <p class="reason-heading-black">КРАСИВАЯ <br> ДОРОГА</p>
+            <p class="reason-number-black"> №4 </p>
+            <p class="description-black">Ехать из Лас-Вегаса совсем<br>
               не скучно!</p>
           </li>
           <li>
-            <p>МАЛО ТУРИСТОВ</p>
-            <p> №5 </p>
-            <p>Большинство едет в Гранд Каньон<br>
+            <p class="reason-heading-black">МАЛО ТУРИСТОВ</p>
+            <p class="reason-number-black"> №5 </p>
+            <p class="description-black">Большинство едет в Гранд Каньон<br>
               и толпится там</p>
           </li>
         </ul>
       </section>
 
-      <section>
+      <section class="booking">
         <h2>Призыв к брони!</h2>
-        <p>ЗАИНТЕРЕСОВАЛИСЬ?</p>
-        <p>Укажите предполагаемые даты поездки,<br>
+        <p class="interest">ЗАИНТЕРЕСОВАЛИСЬ?</p>
+        <p class="booking-info">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </section>
-      <a href="#">поиск отеля</a> 
+      <a class="search" href="#">поиск отеля</a>
             <!-- Место для формы поиска -->
-      
-      <p><a><img src="https://via.placeholder.com/1199х594" alt="Здесь будет карта"></a></p>
-    
-    
+
+      <p class="map"><a><img class="local map" src="https://via.placeholder.com/1199х594" alt="Здесь будет карта"></a></p>
+
+
     </main>
 
-    <footer>
-      <section>
+    <footer class="footer">
+      <section class="contacts">
         <h3> Контакты </h3>
         <p> #VISITSEDONA</p>
         <p> ТЕЛ: +7(495) 666-01-66 </p>
@@ -120,25 +124,25 @@
         <h3> Ссылки на соц сети </h3>
         <ul>
           <li>
-            <a href="#">twitter</a>
+            <a class="social-button" href="#">twitter</a>
           </li>
           <li>
-            <a href="#">facebook</a>
+            <a class="social-button" href="#">facebook</a>
           </li>
           <li>
-            <a href="#">youtube</a>
+            <a class="social-button" href="#">youtube</a>
           </li>
         </ul>
       </section>
 
       <section>
         <h3> Авторство </h3>
-        <p> WEBSITE BY</p>
-        <img src="#" width="115" height="41" alt="эмблема html academy">
+        <p class="copyright"> WEBSITE BY</p>
+        <img class="logo-academy" src="#" width="115" height="41" alt="эмблема html academy">
       </section>
     </footer>
 
-    
+
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 
   </body>
