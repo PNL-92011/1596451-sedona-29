@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"> <!-- прописать PT Sans в font-family в style кастомных свойств -->
-    <!-- <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body class="body">
@@ -25,7 +25,7 @@
     </header>
 
     <main class="container">
-      <img class="main-photo" src="#" width="1200" height="509" alt="картинка <WELCOM to the gorgeous SEDONA> ">
+      <div class="big-photo"> <img class="main-photo" src="#" alt="картинка <WELCOM to the gorgeous SEDONA> "> </div>
 
       <section>
         <h1>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ,<br>
@@ -33,17 +33,21 @@
           <p class="subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
 
-      <section class="reason-1">
-        <h2>Причина 1</h2>
-        <p class="reason-heading-white">НАСТОЯЩИЙ<br> ГОРОДОК</p>
-        <p class="reason-number-white"> №1 </p>
-        <p class="description-white">Седона - не аттракцион для туристов, там<br>
+      <div class="block1">
+        <section class="reason-1">
+        <!-- <h2>Причина 1</h2> -->
+          <div class="reason-1-leftblock">
+            <p class="reason-heading-white">НАСТОЯЩИЙ<br> ГОРОДОК</p>
+            <p class="reason-number-white"> №1 </p>
+            <p class="description-white">Седона - не аттракцион для туристов, там<br>
           течет своя жизнь</p>
-          <img class="photo-right" src="#" alt="фото местности">
-      </section>
+          </div>
+          <div class="photo-little-1"> <img src="#" alt="фото местности"> </div>
+        </section>
+      </div>
 
       <section class="menu">
-        <h2>Меню сайта</h2>
+        <!-- <h2>Меню сайта</h2> -->
         <ul class="menu-list">
           <li class="menu-item">
             <img class="icon" src="icon_home.svg" width="75" height="72" alt="иконка жилье">
@@ -67,46 +71,81 @@
         </ul>
       </section>
 
-      <section class="reason-2">
-        <h2>Причина 2</h2>
-        <img class="photo-left" src="#" alt="фото природы">
-        <p class="reason-heading-white">ТАМ ЕСТЬ<br> МОСТ ДЬЯВОЛА</p>
-        <p class="reason-number-white"> №2 </p>
-        <p class="description-white">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
-      </section>
+      <div class="block2">
+        <section class="reason-2">
+        <!-- <h2>Причина 2</h2> -->
+          <div class="photo-little-2"> <img src="#" alt="фото природы"> </div>
+          <div class="reason-2-rightblock">
+            <p class="reason-heading-white">ТАМ ЕСТЬ<br> МОСТ ДЬЯВОЛА</p>
+            <p class="reason-number-white"> №2 </p>
+            <p class="description-white">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+          </div>
+        </section>
+      </div>
 
       <section class="reason-3-4-5">
-        <h2>Причины 3-5</h2>
-        <ul>
-          <li>
-            <p class="reason-heading-black">НЕБОЛЬШАЯ <br> ПЛОЩАДЬ</p>
-            <p class="reason-number-black"> №3 </p>
-            <p class="description-black">Все достопримечательности<br>
+        <!-- <h2>Причины 3-5</h2> -->
+          <div class="block-grey">
+            <ul class="reasons-last">
+              <li>
+                <p class="reason-heading-black">НЕБОЛЬШАЯ <br> ПЛОЩАДЬ</p>
+                <p class="reason-number-black"> №3 </p>
+                <p class="description-black">Все достопримечательности<br>
               находятся очень близко</p>
-          </li>
-          <li>
-            <p class="reason-heading-black">КРАСИВАЯ <br> ДОРОГА</p>
-            <p class="reason-number-black"> №4 </p>
-            <p class="description-black">Ехать из Лас-Вегаса совсем<br>
+              </li>
+              <li>
+                <p class="reason-heading-black">КРАСИВАЯ <br> ДОРОГА</p>
+                <p class="reason-number-black"> №4 </p>
+                <p class="description-black">Ехать из Лас-Вегаса совсем<br>
               не скучно!</p>
-          </li>
-          <li>
-            <p class="reason-heading-black">МАЛО ТУРИСТОВ</p>
-            <p class="reason-number-black"> №5 </p>
-            <p class="description-black">Большинство едет в Гранд Каньон<br>
+              </li>
+              <li>
+                <p class="reason-heading-black">МАЛО ТУРИСТОВ</p>
+                <p class="reason-number-black"> №5 </p>
+                <p class="description-black">Большинство едет в Гранд Каньон<br>
               и толпится там</p>
-          </li>
-        </ul>
+              </li>
+            </ul>
+          </div>
       </section>
 
       <section class="booking">
-        <h2>Призыв к брони!</h2>
-        <p class="interest">ЗАИНТЕРЕСОВАЛИСЬ?</p>
-        <p class="booking-info">Укажите предполагаемые даты поездки,<br>
+        <!-- <h2>Призыв к брони!</h2> -->
+          <p class="interest">ЗАИНТЕРЕСОВАЛИСЬ?</p>
+          <p class="booking-info">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       </section>
-      <a class="search" href="#">поиск отеля</a>
-            <!-- Место для формы поиска -->
+      <br>                            <!-- сомневаюсь, что использовать br правильно -->
+
+      <div class="panel-booking">
+        <a class="search" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+      </div>
+
+      <div class="form-booking">
+        <form class="form" action="#" method="POST">
+            <div class="check-in">
+              <p>
+                <label for="date-check-in">ДАТА ЗАЕЗДА</label>
+                <input type="text" id="date-check-in" name="date-in" value="24 АПРЕЛЯ 2017">  <!-- value OR placeholder ?-->
+              </p>
+            </div>
+            <div class="check-out">
+              <p>
+                <label for="date-check-out">ДАТА ВЫЕЗДА</label>
+                <input type="text" id="date-check-out" name="date-out" value="4 ИЮЛЯ 2017">   <!-- value OR placeholder ?-->
+              </p>
+            </div>
+            <div class="people-amount">
+              <p>
+                <label for="adults">ВЗРОСЛЫЕ</label>
+                <input type="text" id="adults" name="adults-nbr" value="2">
+                <label for="children">ДЕТИ</label>
+                <input type="text" id="children" name="children-nbr" value="0">
+              </p>
+            </div>
+            <button class="button" type="submit">НАЙТИ</button>
+       </form>
+      </div>
 
       <p class="map"><a><img class="local map" src="https://via.placeholder.com/1199х594" alt="Здесь будет карта"></a></p>
 
@@ -115,28 +154,22 @@
 
     <footer class="footer">
       <section class="contacts">
-        <h3> Контакты </h3>
+        <!-- <h3> Контакты </h3>  -->
         <p> #VISITSEDONA</p>
         <p> ТЕЛ: +7(495) 666-01-66 </p>
       </section>
 
-      <section>
-        <h3> Ссылки на соц сети </h3>
+      <section class="footer-social">
+        <!--  <h3> Ссылки на соц сети </h3>  -->
         <ul>
-          <li>
-            <a class="social-button" href="#">twitter</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">facebook</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">youtube</a>
-          </li>
+          <li> <a class="social-button" href="#">twitter</a>  </li>
+          <li> <a class="social-button" href="#">facebook</a> </li>
+          <li> <a class="social-button" href="#">youtube</a>  </li>
         </ul>
       </section>
 
       <section>
-        <h3> Авторство </h3>
+        <!--  <h3> Авторство </h3>  -->
         <p class="copyright"> WEBSITE BY</p>
         <img class="logo-academy" src="#" width="115" height="41" alt="эмблема html academy">
       </section>
