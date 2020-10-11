@@ -1,0 +1,347 @@
+/*  Variables  */
+
+:root {
+  --basic-black: #000000;
+  --black-light: #333333;
+  --basic-white: #FFFFFF;
+  --brown: #766357;
+  --blue: #81B3D2;
+  --grey: #EEEEEE;
+  --grey-light: #F2F2F2;
+  --background: #888888;
+  --basic-dark: #C0C0C0;
+  --extra-color: #FFE4B5;   /* временно, для самопроверки */
+  --footer-white: rgba(255, 255, 255, 0.9);
+}
+
+/* Global */
+
+body {
+  width: 1200px;
+  margin: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--basic-white); /* заменить на --basic-white */
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*  MAIN NAVIGATION */
+     /*  Как задать выравнивание первых двух пунктов по левому краю, а последних двух - по правому?  */
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+/*  WELCOM to the gorgeous SEDONA  */
+.big-photo {
+  width: 1200px;
+  height: 509px;
+  top: 55px;
+  background-color: var(--extra-color);  /* временно. для наглядности */
+}
+
+h1 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+
+/*  ПРИЧИНА 1  */
+
+.block1 {
+  width: 1200px;
+  height: 256px;
+  color: var(--basic-white);
+  background-color: var(--basic-white);
+}
+
+.reason-1-leftblock {  /* голубой блок */
+  width: 400px;
+  height: 256px;
+  top: 780px;
+  background: var(--blue);
+}
+
+.reason-heading-white { /* НАСТОЯЩИЙ ГОРОДОК */
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: var(--basic-white);
+  vertical-align: middle;
+  padding-top: 47px;
+  /* text-align: center; */
+  /* vertical-align: middle;*/
+  }
+
+.reason-number-white { /*  - № 1 - */
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.description-white { /* Седона - не аттракцион.... */
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+/*.photo-little-1 {
+  width: 800px;
+  height: 256px;
+  left: 400px;
+  top: 780px;
+  background-color: url;
+}*/
+
+/* МЕНЮ САЙТА */
+.menu-list {
+  list-style: none;
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.icon {
+  color: var(--blue);
+}
+
+/* нужно ли прописывать габариты иконок, если они указывались в html? */
+.icon_home.svg {
+  left: 440px;
+  top: 1096px;
+}
+
+.icon_burger.svg {
+  left: 602px;
+  top: 1097px;
+}
+
+.icon_gift.svg {
+  left: 1008px;
+  top: 1091px;
+}
+
+.menu-item-name {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.description-black {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+/*  ПРИЧИНА 2  */
+
+.block2 {
+  top: 1366px;
+  width: 1200px;
+  height: 256px;
+  color: var(--basic-white);
+  background-color: var(--basic-white);
+}
+
+/*.photo-little-2 {
+  width: 800px;
+  height: 256px;
+  top: 1366px;
+  margin: 0;
+  background-color: var(--brown) ;
+}*/
+
+.reason-2-rightblock {  /* голубой блок 2 */
+  width: 400px;
+  height: 256px;
+  margin-left: 800px;
+  top: 1366px;
+  background: var(--blue);
+}
+
+
+/*  ПРИЧИНЫ 3-5  */
+
+.reasons-last {
+  list-style: none;
+}
+
+.block-grey {
+  background-color: var(--grey);
+  top: 1622px;
+  /*height: 256px;*/
+}
+
+.reason-heading-black {  /* НАЗВАНИЯ ПРИЧИН */
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;            /* почему не работает жирный шрифт, если задать 700 ? */
+  color: var(--basic-black);
+  vertical-align: middle;
+  padding-top: 47px;
+}
+
+.reason-number-black { /*  - № 1 - */
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.description-black { /* ОПИСАНИЕ */
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-black);
+  padding-bottom: 54px
+}
+
+.interest {               /* ЗАИНТЕРЕСОВАЛИСЬ? */
+  font-size: 30px;
+  line-height: 24px;
+  top: 1936px;
+  margin-top: 58px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.booking-info {           /* Укажите даты поездки.. */
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-black);
+}
+
+.panel-booking {          /* коричневый блок */
+  width: 568px;
+  height: 86px;
+  top: 2083px;
+  margin-left: 316px;
+  background-color: var(--brown);
+}
+
+.search {                 /*  ПОИСК ГОСТИНИЦЫ В СЕДОНЕ  */
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-white);
+  /*margin-top: 30px;
+    margin-bottom: 30px;
+ /* vertical-align: middle;       /* почему не работает ? */
+ /* padding-top: 30px;            /* почему не работает ? */
+ /* top: 2113px;            /* Как разместить текст по центру блока ? */
+}
+
+.form-booking {
+  width: 568px;
+  height: 395px;
+  top: 2169px;
+  margin-left: 316px;
+  color: var(--basic-black);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  background-color: var(--basic-white);
+  border: 2px solid lightgray;     /* убрать границу, добавить тень! */
+}
+
+input {
+  background-color: var(--grey-light);
+  border: none;
+}
+
+.check-in {
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-top: 55px;
+}
+
+.check-out {
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-top: 29px;
+}
+
+.people-amount {
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-top: 30px;
+}
+
+.button {
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-top: 54px;
+  margin-bottom: 55px;
+  width: 458px;
+  height: 58px;
+  font-size: 21px;
+  color: var(--basic-white);
+  font-weight: inherit;
+  background-color: var(--blue);
+  border: none;
+}
+
+/*   КАРТА  */
+.map {
+  width: 1199px;
+  height: 594px;
+  top: 2169px;
+  left: 1px;
+  background-color: var(--extra-color);
+}
+
+/*     ПОДВАЛ    */
+.footer {
+  width: 1200px;
+  height: 120px;
+  top: 2642px;
+  font-weight: bold;
+  background-color: var(--footer-white);
+}
+
+.contacts {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: var(--blue);
+}
