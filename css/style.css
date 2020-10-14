@@ -1,22 +1,23 @@
 /*  Variables  */
 
 :root {
-  --basic-black: #000000;
-  --black-light: #333333; /*описания + гост/мотел/апарты и цена*/
-  --basic-white: #FFFFFF;
-  --brown: #766357;  /* кнопки Поиск гостиницы, забронировать + меню Гостиницы */
-  --brown-double: #604E43; /* кнопка Поиск гостиницы при наведении */
-  --brown-dark: #503E33;   /* кнопка Поиск гостиницы при нажатии */
+  --basic-black: #000000;      /*базовый текст*/
+  --black-light: #333333;      /*описания + гост/мотел/апарты и цена*/
+  --basic-white: #FFFFFF;      /*базовый текст*/
+  --brown: #766357;            /*кнопки Поиск гостиницы, забронировать + меню Гостиницы*/
+  --brown-double: #604E43;     /*кнопка Поиск гостиницы при наведении*/
+  --brown-dark: #503E33;       /*кнопка Поиск гостиницы при нажатии*/
   --blue: #81B3D2;
-  --basic-grey: #EEEEEE;  /* блок три причины */
-  --grey-grey: #666666;   /* рейтинг текст*/
-  --grey-light: #F2F2F2;  /*поле даты заезда/выезда + рейтинг фон*/
+  --blue-double: #669EC0;        /*кнопка найти при наведении*/
+  --blue-dark: #5496BD;          /*кнопка найти при нажатии*/
+  --basic-grey: #EEEEEE;         /*блок три причины*/
+  --grey-grey: #666666;          /*рейтинг текст*/
+  --grey-light: #F2F2F2;         /*поле даты заезда/выезда + рейтинг фон*/
   --grey-light-double: #EBEBEB;  /*поле даты заезда/выезда  при наведении*/
-  --grey-light-light: #E5E5E5;  /* рамка для поля даты заезда/выезда при фокусе */
-  --grey-dark: #A9A9A9; /*кнопки -/+ */
-  --background: #888888;
-  --basic-dark: #C0C0C0;  /*  ??? */
-  --extra-color: #FFE4B5;   /*временно, для самопроверки*/
+  --grey-light-light: #E5E5E5;   /*рамка для поля даты заезда/выезда при фокусе*/
+  --grey-dark: #A9A9A9;          /*кнопки -/+*/
+  --background: #888888;         /*фон по бокам*/
+  --extra-color: #FFE4B5;        /*временно, для самопроверки*/
   --rgba-white-9: rgba(255, 255, 255, 0.9);
 }
 
@@ -33,6 +34,7 @@ body {
   background-color: var(--basic-white);
   text-transform: uppercase;
 }
+
 
 /*  MAIN NAVIGATION  */
 
@@ -90,6 +92,7 @@ h1 {
 }
 
 
+
 /*  ПРИЧИНА 1  */
 
 .reason-1-leftblock {  /*голубой блок*/
@@ -118,6 +121,7 @@ h1 {
 }
 
 
+
 /*  ФУНКЦИИ САЙТА  */
 
 .features-list {
@@ -140,6 +144,7 @@ h1 {
 }
 
 
+
 /*  ПРИЧИНА 2  */
 
 .reason-2-rightblock {  /*голубой блок 2*/
@@ -148,6 +153,7 @@ h1 {
   margin-left: 800px;
   background: var(--blue);
 }
+
 
 
 /*  ПРИЧИНЫ 3-5  */
@@ -177,6 +183,7 @@ h1 {
  }
 
 
+
  /*  ЗАИНТЕРЕСОВАЛИСЬ?  */
 
 .interest {
@@ -196,6 +203,18 @@ h1 {
   background-color: var(--brown);
 }
 
+.panel-booking:link {
+  background-color: var(--brown);
+}
+
+.panel-booking:hover {
+  background-color: var(--brown-double);
+}
+
+.panel-booking:active {
+  background-color: var(--brown-dark);
+}
+
 .search {                 /* кнопка "Поиск гостины в Седоне" */
   font-size: 21px;
   line-height: 26px;
@@ -203,11 +222,25 @@ h1 {
   color: var(--basic-white);
 }
 
+.panel-booking a:link {
+  color: var(--basic-white);
+}
+
+.panel-booking a:hover {
+  color: var(--basic-white)
+}
+
+.panel-booking a:active {
+  color: var(--basic-white);
+  opacity: 0.3;
+}
+
+
+
 input {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  background-color: var(--grey-light);
   border: none;
 }
 
@@ -220,6 +253,20 @@ input {
   margin-top: 55px;*/
 }
 
+.check-in input {
+background-color: var(--grey-light);
+}
+
+.check-in input:hover {
+  background-color: var(--grey-light-double);
+}
+
+.check-in input:focus{
+  background-color: var(--basic-white);
+  border: 2px solid var(--grey-light-light);
+}
+
+
 .check-out {
   font-size: 14px;
   line-height: 26px;
@@ -229,14 +276,47 @@ input {
   margin-top: 29px;*/
 }
 
+.check-out input {
+  background-color: var(--grey-light);
+  }
+
+  .check-out input:hover {
+    background-color: var(--grey-light-double);
+  }
+
+  .check-out input:focus{
+    background-color: var(--basic-white);
+    border: 2px solid var(--grey-light-light);
+  }
+
+
 .people-amount {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
+
  /* margin-left: 55px;
   margin-right: 55px;
   margin-top: 30px;*/
 }
+
+.people-amount input{
+  background-color: var(--grey-light);
+}
+
+.people-amount input:link {
+  background-color: var(--grey-light);
+}
+
+.people-amount input:hover {
+  background-color: var(--grey-light-double);
+}
+
+.people-amount input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--grey-light-light);
+}
+
 
 .button {
   font-size: 21px;
@@ -252,6 +332,22 @@ input {
   border: none;*/
 }
 
+.button:link {
+  background-color: var(--blue);
+}
+
+.button:hover {
+  background-color: var(--blue-double);
+}
+
+.button:active {
+  background-color: var(--blue-dark);
+}
+
+
+
+
+
 /*   КАРТА  */
 .map {
   width: 1199px;
@@ -260,6 +356,8 @@ input {
   left: 1px;
   background-color: var(--extra-color);
 }
+
+
 
 /*     ПОДВАЛ    */
 .footer {
