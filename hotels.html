@@ -4,72 +4,72 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"> <!-- прописать PT Sans в font-family в style кастомных свойств -->
-    <!-- <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css"> -->
-</head>
-<body>
-    <header>
-        <nav>
-          <a href="index.html">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+   </head>
+<body class="body">
+  <header class="header">
+    <nav class="main-navigation">
+          <a class="header-logo" href="index.html">
             <img src="img/index-logo.svg" width="138" height="70" alt="Логотип сайта «City of Sedona»">
           </a>
-          <ul>
-            <li><a href="blank.html">Информация</a></li>
-            <li><a href="blank.html">Фото и Видео</a></li>
-            <li><a href="blank.html">Карта штата</a></li>
-            <li><a href="blank.html">Гостиницы</a></li>
+          <ul class="site-navigation">
+            <li class="menu-item"><a class="menu-item-1" href="blank.html">Информация</a></li>
+            <li class="menu-item"><a class="menu-item-2" href="blank.html">Фото и Видео</a></li>
+            <li class="menu-item"><a class="menu-item-3" href="blank.html">Карта штата</a></li>
+            <li class="menu-item"><a class="menu-item-4" href="blank.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
 
-        <h1>Поиск гостиницы по параметрам</h1>
+        <!-- <h1>Поиск гостиницы по параметрам</h1> -->
 
         <img src="#" width="1200" height="217" alt="картинка WELCOM to the SEDONA">
 
-          <section>
-            <h2>Фильтр</h2>
+          <section class="temporarily">
+            <!-- <h2>Фильтр</h2> -->
             <form action="https://echo.htmlacademy.ru/" method="POST">
               <div>
-              <p>ИНФРАСТРУКТУРА</p>
-              <label><input type="checkbox" name="swim_pool" checked>Бассейн</label><br>
-              <label><input type="checkbox" name="park_ing">Паровка</label><br>
-              <label><input type="checkbox" name="wi-fi">WI-FI</label>
+              <p class="filter-group">ИНФРАСТРУКТУРА</p>
+              <label class="filter-item"><input class="filter-item-box" type="checkbox" name="swim_pool" checked>Бассейн</label><br>
+              <label class="filter-item"><input class="filter-item-box" type="checkbox" name="park_ing">Паровка</label><br>
+              <label class="filter-item"><input type="checkbox" name="wi-fi">WI-FI</label>
               </div>
 
               <div>
-              <p>ТИП ЖИЛЬЯ</p>
-              <label><input type="checkbox" name="aaa" checked>Гостиница</label><br>
-              <label><input type="checkbox" name="bbb" checked>Мотель</label><br>
-              <label><input type="checkbox" name="wi-fi" checked>Апарты</label>
+              <p class="filter-group">ТИП ЖИЛЬЯ</p>
+              <label class="filter-item"><input type="checkbox" name="hotel" checked>Гостиница</label><br>
+              <label class="filter-item"><input type="checkbox" name="motel" checked>Мотель</label><br>
+              <label class="filter-item"><input type="checkbox" name="apparts" checked>Апартаменты</label>
               </div>
 
               <div>
-                <p>СТОИМОСТЬ В СУТКИ (Р):</p>
-                <input type="text" value="0">
-                <input type="text" value="3000">
+                <p class="filter-group">СТОИМОСТЬ В СУТКИ (Р):</p>
+                <input class="filter-price" type="text" value="0">
+                <input class="filter-price" type="text" value="3000">
                 <button>левый бегунок</button>
                 <button>правый бегунок </button>
 
                 <div class="line"><img src="rectangle.svg" width="158" height="2" alt="шкала цены"></div>
 
                 <div class="buttons">
-                <input type="submit" value="Показать"><a href="https://echo.htmlacademy.ru/"></a>
+                <input class="filter-price-button" type="submit" value="Показать"><a href="https://echo.htmlacademy.ru/"></a>
                 </div>
               </div>
             </form>
           </section>
 
           <section>
-            <h2>Сортировка жилья по критериям</h2>
-            <div> <p><b>НАЙДЕНО: 3</b></p> </div>
-            <div>
+            <!--  <h2>Сортировка жилья по критериям</h2> -->
+            <div> <p class="sorting-resalt"><b>НАЙДЕНО: 3</b></p> </div>
+            <div class="sorting">
               <p>СОРТИРОВКА</p>
-              <ul>
-                  <li><a href="blank.html">по цене</a></li>
-                  <li><a href="blank.html">по типу</a></li>
-                  <li><a href="blank.html">по рейтингу</a></li>
+              <ul class="sorting-group">
+                  <li class="sorting-type-current"><a href="#">по цене</a></li>
+                  <li class="sorting-type"><a href="#">по типу</a></li>
+                  <li class="sorting-type"><a href="#">по рейтингу</a></li>
               </ul>
             </div>
             <div>
@@ -79,29 +79,42 @@
           </section>
 
           <section>
-            <h2>Варианты</h2>
+            <!-- <h2>Варианты</h2> -->
               <img src="image.png" width="135" height="90" alt="фото гостиницы">
-              <a href="blank.html"><b> AMARA RESORT & SPA </b></a>
-              <p> ГОСТИНИЦА </p>
-              <p> ОТ 4000 Р.</p>
-            <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
-            <button type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
+              <a class="offer-name-place" href="blank.html">AMARA RESORT & SPA</a>
+              <p>
+                <span class="offer-type-and-price"> ГОСТИНИЦА </span>
+                <span class="offer-type-and-price"> ОТ 4000 Р.</span>
+              </p>
+
+              <p class="offer-details-and-booking">
+                <button class="offer-details" type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+                <button class="offer-booking" type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
+              </p>
+
             <div>
-              <ul>
+              <ul class="rating-stars">
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
               </ul>
             </div>
-            <div> <p> РЕЙТИНГ: 8,5 </p></div>
+
+            <div class="offer-rating"> <p> РЕЙТИНГ: 8,5 </p> </div>
 
               <img src="image.png" width="135" height="90" alt="фото мотеля">
-              <a href="blank.html"><b> DESERT QUAIL INN </b></a>
-              <p> МОТЕЛЬ </p>
-              <p> ОТ 3000 Р.</p>
-              <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
-              <button type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
+              <a class="offer-name-place" href="blank.html"> DESERT QUAIL INN</a>
+              <p>
+                <span class="offer-type-and-price"> МОТЕЛЬ </span>
+                <span class="offer-type-and-price"> ОТ 3000 Р.</span>
+              </p>
+
+              <p class="offer-details-and-booking">
+                <button class="offer-details" type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+                <button class="offer-booking" type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
+              </p>
+
             <div>
               <ul>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
@@ -109,52 +122,54 @@
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
               </ul>
             </div>
-            <div> <p> РЕЙТИНГ: 8,9 </p></div>
+            <div class="offer-rating"> <p> РЕЙТИНГ: 8,9 </p> </div>
 
               <img src="image.png" width="135" height="90" alt="фото апартаментов">
-              <a href="blank.html"><b> VILLAS AT POCO DIABLO </b></a>
-              <p> АПАРТАМЕНТЫ </p>
-              <p> ОТ 2000 Р.</p>
-              <button type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
-              <button type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
+              <a class="offer-name-place" href="blank.html"> VILLAS AT POCO DIABLO </a>
+              <p>
+                <span class="offer-type-and-price"> АПАРТАМЕНТЫ </span>
+                <span class="offer-type-and-price"> ОТ 2000 Р.</span>
+              </p>
+
+              <p class="offer-details-and-booking">
+                <button class="offer-details" type="button"><a href="blank.html">ПОДРОБНЕЕ</a></button>
+                <button class="offer-booking" type="submit"><a href="blank.html">ЗАБРОНИРОВАТЬ</a></button>
+              </p>
+
             <div>
               <ul>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
                 <li><img src="icon_star.svg" width="19" height="17" alt="звезда"></li>
               </ul>
             </div>
-            <div> <p> РЕЙТИНГ: 8,9 </p></div>
+
+            <div class="offer-rating"> <p> РЕЙТИНГ: 9,2 </p> </div>
           </section>
       </main>
 
-      <footer>
-        <section>
-          <h3> Контакты </h3>
+      <footer class="footer">
+        <section class="footer-contacts">
+          <!-- <h3>  КОНТАКТЫ  </h3>  -->
           <p> #VISITSEDONA</p>
           <p> ТЕЛ: +7(495) 666-01-66 </p>
         </section>
 
-        <section>
-          <h3> Ссылки на соц сети </h3>
+        <section class="footer-social">
+          <!--  <h3>  ССЫЛКИ НА СОЦ СЕТИ  </h3>  -->
           <ul>
-            <li>
-              <a href="#">twitter</a>
-            </li>
-            <li>
-              <a href="#">facebook</a>
-            </li>
-            <li>
-              <a href="#">youtube</a>
-            </li>
+            <li> <a class="social-button" href="#">twitter</a>  </li>
+            <li> <a class="social-button" href="#">facebook</a> </li>
+            <li> <a class="social-button" href="#">youtube</a>  </li>
           </ul>
         </section>
 
         <section>
-          <h3> Авторство </h3>
-          <p> WEBSITE BY</p>
-          <img src="#" width="115" height="41" alt="эмблема html academy">
+          <!--  <h3> АВТОРСТВО </h3>  -->
+          <p class="copyright"> WEBSITE BY</p>
+          <img class="logo-academy" src="#" width="115" height="41" alt="эмблема html academy">
         </section>
       </footer>
+
 
 </body>
 </html>
