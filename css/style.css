@@ -466,46 +466,45 @@ background-color: var(--grey-light);
   color: var(--black-light);
 }
 
-.offer-details-and-booking a,
-.offer-details-and-booking a:hover {     /*ПОДРОБНЕЕ  текст*/
+.offer-details-and-booking {           /*ПОДРОБНЕЕ  текст*/
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
   color: var(--basic-white);
 }
 
-.offer-details-and-booking a:active {
-  color: var(--basic-white);
-  opacity: 0.3;
-}
-
-.offer-details-and-booking button {      /*ПОДРОБНЕЕ фон*/
-  border: none;
-}
-
 .offer-details {
+  color: var(--basic-white);
   background-color: var(--blue) ;
 }
 
 .offer-details:hover {
+  color: var(--basic-white);
   background-color: var(--blue-double) ;
 }
 
 .offer-details:active {
-  background-color: var(--blue-dark) ;
+  color: var(--basic-white);
+  opacity: 0.3;
+  background-color: var(--blue-dark);
 }
 
-.offer-booking {                       /*ЗАБРОНИРОВАТЬ фон*/
+.offer-booking {
+  color: var(--basic-white);
   background-color: var(--brown);
 }
 
 .offer-booking:hover {
+  color: var(--basic-white);
   background-color: var(--brown-double);
 }
 
 .offer-booking:active {
+  color: var(--basic-white);
+  opacity: 0.3;
   background-color: var(--brown-dark);
 }
+
 
 .offer-rating {
   font-size: 14px;
