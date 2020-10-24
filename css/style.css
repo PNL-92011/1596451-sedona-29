@@ -267,6 +267,23 @@ background-color: var(--grey-light);
   border: 2px solid var(--grey-light-light);
 }
 
+                                              /* КАЛЕНДАРЬ */
+.calendar-icon::before {
+  content: " ";
+  display: block;
+  background-color: var(--grey-light);
+
+}
+
+/*.calendar-icon button:hover:before {
+  color: ;
+}
+
+.calendar-icon:active:before {
+  color: ;
+}
+*/
+
 
 .check-out {
   font-size: 14px;
@@ -319,7 +336,7 @@ background-color: var(--grey-light);
 }
 
 
-.button {
+.booking-button-find {
   font-size: 21px;
   color: var(--basic-white);
   font-weight: 700;
@@ -526,19 +543,70 @@ background-color: var(--grey-light);
   font-weight: bold;
 }
 
-.footer-social ul {
+
+
+
+
+.footer-social-links ul {
   list-style: none;
+
+ }
+
+a {
+  text-decoration: none;
 }
 
-.social-button {
-  color: var(--blue);
+.social-icons-item {
+  width: 46px;
+  height: 48px;
+  background-color: var(--blue);
 }
+
+
+.social-icon-item-link {
+  color: var(--basic-white);
+  background: var(--blue);
+
+}
+
+
+
+
+
+
+
+
+
+
+/*.social-button {
+  color:green;
+  background-color: var(--blue);
+}
+
+.visually-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  background-color: var(--blue);
+}
+
+
+.footer-social-links a {
+  width: 46px;
+  height: 48px;
+  border: none;
+}
+*/
+
+
+
+
+
+
+
 
 .copyright {
   font-size: 14px;
   line-height: 26px;
 }
-
-
-
 
