@@ -1,12 +1,13 @@
 /*  Variables  */
 
 :root {
-  --basic-black: #000000;      /*базовый текст*/
-  --black-light: #333333;      /*описания + гост/мотел/апарты и цена*/
-  --basic-white: #FFFFFF;      /*базовый текст*/
-  --brown: #766357;            /*кнопки Поиск гостиницы, забронировать + меню Гостиницы*/
-  --brown-double: #604E43;     /*кнопка Поиск гостиницы при наведении*/
-  --brown-dark: #503E33;       /*кнопка Поиск гостиницы при нажатии*/
+  --basic-black: #000000;        /*базовый текст*/
+  --black-light: #333333;        /*описания + гост/мотел/апарты и цена*/
+  --anthracite: #231F20;         /*лого html academy в покое*/
+  --basic-white: #FFFFFF;        /*базовый текст*/
+  --brown: #766357;              /*кнопки Поиск гостиницы, забронировать + меню Гостиницы*/
+  --brown-double: #604E43;       /*кнопка Поиск гостиницы при наведении*/
+  --brown-dark: #503E33;         /*кнопка Поиск гостиницы при нажатии*/
   --blue: #81B3D2;
   --blue-double: #669EC0;        /*кнопка найти при наведении*/
   --blue-dark: #5496BD;          /*кнопка найти при нажатии*/
@@ -15,10 +16,16 @@
   --grey-light: #F2F2F2;         /*поле даты заезда/выезда + рейтинг фон*/
   --grey-light-double: #EBEBEB;  /*поле даты заезда/выезда  при наведении*/
   --grey-light-light: #E5E5E5;   /*рамка для поля даты заезда/выезда при фокусе*/
+  --grey-CACACA: #CACACA;        /*стрелки сортировки вверх/вниз*/
   --grey-dark: #A9A9A9;          /*кнопки -/+*/
+  --grey-dirty: #6A6A6A;         /*рамки и галки фильтров заблокированные*/
+  --grey-smoky: #BDBBBC;         /*лого html academy при нажатии*/
   --background: #888888;         /*фон по бокам*/
   --extra-color: #FFE4B5;        /*временно, для самопроверки*/
-  --extra-extra: 	#FF0000;       /*временно, для самопроверки*/
+  --extra-red: 	#FF0000;         /*временно, для самопроверки*/
+  --extra-green: #138678;        /*временно, для самопроверки*/
+  --extra-orange: #ff8c1a;       /*временно, для самопроверки*/
+  --extra-blue: #1a1dff;         /*временно, для самопроверки*/
   --rgba-white-9: rgba(255, 255, 255, 0.9);
 }
 
@@ -267,22 +274,24 @@ background-color: var(--grey-light);
   border: 2px solid var(--grey-light-light);
 }
 
-                                              /* КАЛЕНДАРЬ */
-.calendar-icon::before {
-  content: " ";
-  display: block;
-  background-color: var(--grey-light);
+                            /* КАЛЕНДАРЬ */
 
+.calendar-icon {
+  border: none;
+}
+                           /*  ??  */         /*  ??  */
+.svg-path-both {
+  --color-svg-calendar: var(--grey-dark);
 }
 
-/*.calendar-icon button:hover:before {
-  color: ;
+.svg-path-both:hover {
+  --color-svg-calendar: var(--extra-red);
 }
 
-.calendar-icon:active:before {
-  color: ;
+.svg-path-both:active {
+  --color-svg-calendar: var(--extra-green);
 }
-*/
+
 
 
 .check-out {
@@ -296,17 +305,35 @@ background-color: var(--grey-light);
 
 .check-out input {
   background-color: var(--grey-light);
-  }
-
-  .check-out input:hover {
+}
+.check-out input:hover {
     background-color: var(--grey-light-double);
-  }
-
-  .check-out input:focus{
+}
+.check-out input:focus{
     background-color: var(--basic-white);
     border: 2px solid var(--grey-light-light);
-  }
+}
 
+button.calendar-background {
+  display: block;
+  width: 21px;
+  height: 23px;
+  border: none;
+  text-decoration: none;
+  background-color: var(--grey-light);
+  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/calendar.svg");
+  background-repeat: no-repeat;
+}
+
+button.calendar-background:hover {
+  background-color: var(--grey-light-double);
+  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/calendar_black.svg");
+}
+
+button.calendar-background:active {
+  background-color: var(--basic-white);
+  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/calendar_blue.svg");
+}
 
 .people-amount {
   font-size: 14px;
@@ -381,9 +408,10 @@ background-color: var(--grey-light);
 
 
 
+
 .temporarily {
-  background-color: var(--blue); /* временно, пока нет фона */
-}
+  background-color: var(--blue); } /* временно, пока нет фона */
+
 
 .filter-group {                /*инфраструктура*/
   font-size: 16px;
@@ -391,9 +419,45 @@ background-color: var(--grey-light);
   font-weight: 700;
 }
 
-.filter-item {                 /*бассейн, wi-fi */
-  color: var(--basic-white);
+
+ /*бассейн, wi-fi, паркинг*/
+
+.filter-item {
+color: var(--basic-white);
 }
+
+.filter-checkbox-path,
+.filter-checkbox-path:hover {
+  fill: var(--basic-white);
+}
+
+.filter-checkbox-path:disabled {
+  fill: var(--grey-dirty);
+}
+
+
+/*
+input.filter-item-box {
+  display: block;
+  width: 23px;
+  height: 23px;
+  border: none;
+  text-decoration: none;
+  background-color: var(--grey-light);
+  background-repeat: no-repeat;
+  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/checkbox-off_blocked.svg");
+}
+*/
+
+
+
+
+
+
+
+
+
+
 
 .filter-price {
   color: var(--basic-white);
@@ -447,9 +511,7 @@ background-color: var(--grey-light);
   text-decoration: underline;
 }
 
-.sorting-type a:active {
-  color: var(--basic-black);
-}
+.sorting-type a:active { color: var(--basic-black); }
 
 .sorting-type-current a,         /*текущая сортировка*/
 .sorting-type-current a:hover,
@@ -458,6 +520,18 @@ background-color: var(--grey-light);
   color: var(--blue);
   background-color: var(--basic-white);
 }
+
+
+
+.sorting-icon:hover  { fill: var(--basic-black); }              /*  ВВЕРХ ВНИЗ  */
+.sorting-icon:active { fill: var(--blue); }
+
+.sorting-icon-current,
+.sorting-icon-current:hover,
+.sorting-icon-current:active { fill: var(--blue); }
+
+
+
 
 
 .offer-name-place {              /*AMARA RESORT & SPA*/
@@ -522,6 +596,9 @@ background-color: var(--grey-light);
   background-color: var(--brown-dark);
 }
 
+.rating-stars {
+  list-style: none;
+}
 
 .offer-rating {
   font-size: 14px;
@@ -531,12 +608,13 @@ background-color: var(--grey-light);
 }
 
 
-/*     ПОДВАЛ    */
+/*   -------   ПОДВАЛ   -------   */
 
 .footer {
   background-color: var(--rgba-white-9);
 }
 
+/*  КОНТАНКТЫ  */
 .footer-contacts {
   font-size: 21px;
   line-height: 26px;
@@ -544,69 +622,45 @@ background-color: var(--grey-light);
 }
 
 
-
-
-
-.footer-social-links ul {
+/*   СОЦИАЛЬНЫЕ СЕТИ   */
+.social-icons li {
   list-style: none;
-
- }
-
-a {
-  text-decoration: none;
-}
-
-.social-icons-item {
   width: 46px;
   height: 48px;
   background-color: var(--blue);
-}
+ }
 
+a { text-decoration: none; }
 
-.social-icon-item-link {
-  color: var(--basic-white);
-  background: var(--blue);
-
-}
-
-
-
-
-
-
-
-
-
-
-/*.social-button {
-  color:green;
-  background-color: var(--blue);
-}
 
 .visually-hidden {
   overflow: hidden;
   position: absolute;
   clip: rect(0 0 0 0);
-  background-color: var(--blue);
+  background-color: var(--blue);   /*возможно нужно будет заменить*/
+}
+
+.social-icons li:hover {
+  background-color: var(--blue-double);
+}
+
+.social-icons li:active {
+  background-color: url("file:///C:/Users/Hp/1596451-sedona-29/img/twitter.svg");
+  fill-opacity: var(--blue-dark);
 }
 
 
-.footer-social-links a {
-  width: 46px;
-  height: 48px;
-  border: none;
-}
-*/
 
 
 
 
 
-
-
-
+/*   АВТОРСТВО   */
 .copyright {
   font-size: 14px;
   line-height: 26px;
 }
 
+.logo-academy { background-color: var(--basic-white); }
+.logo-academy:hover  { fill: var(--blue); }
+.logo-academy:active { fill: var(--grey-smoky); }
