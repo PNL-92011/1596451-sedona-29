@@ -211,17 +211,9 @@ a {
   background-color: var(--brown);
 }
 
-.panel-booking:link {
-  background-color: var(--brown);
-}
-
-.panel-booking:hover {
-  background-color: var(--brown-double);
-}
-
-.panel-booking:active {
-  background-color: var(--brown-dark);
-}
+.panel-booking:link { background-color: var(--brown); }
+.panel-booking:hover { background-color: var(--brown-double); }
+.panel-booking:active { background-color: var(--brown-dark); }
 
 .search {                 /* кнопка "Поиск гостины в Седоне" */
   font-size: 21px;
@@ -230,172 +222,191 @@ a {
   color: var(--basic-white);
 }
 
-.panel-booking a:link {
-  color: var(--basic-white);
-}
-
-.panel-booking a:hover {
-  color: var(--basic-white)
-}
-
+.panel-booking a:link { color: var(--basic-white); }
+.panel-booking a:hover { color: var(--basic-white); }
 .panel-booking a:active {
   color: var(--basic-white);
   opacity: 0.3;
 }
 
 
-
-.form-booking input {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 700;
-  border: none;
+.form-booking {
+  box-sizing: border-box;  /* позволяет значения padding и border вычитать из ширины и длины блока,  div останется с фиксированными параметрами, но для контента останется заданных размеров */
+color: var(--basic-black);
+width: 568px;
+height: 395px;
+font-weight: bold;
+font-size: 14px;
+line-height: 26px;
 }
 
-.check-in {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 700;
-  /*margin-left: 55px;
-  margin-right: 55px;
-  margin-top: 55px;*/
+.booking {
+  display: flex;            /* лайбл и инпут с кнопкой в одну строку */
+  align-items: center;
+  width: 100% ;             /* ???  */
+margin-bottom: 29px;        /* h до следующей строки */
+margin-top: 55px;
 }
 
-.check-in input {
+.booking-label {            /*ДАТА ЗАЕЗДА*/
+  width: 121px;
+  flex-shrink: 0;           /* фиксированная ширина поля */
+  margin-left: 55px;
+  text-align: left;
+}
+
+.booking-date-cld {          /* DIV: pole + cld */
+  position: relative;        /*Положение элемента устанавливается относительно его исходного места.*/
+  flex-grow: 1;               /*1 = разрешено  изменять размер*/
+
+}
+
+.booking-input {       /* INPUT */
+color: var(--basic-black);
 background-color: var(--grey-light);
+font-weight: bold;
+font-size: 14px;
+line-height: 26px;
+border: none;
+  display: block;      /*элем-ты займут всю ширину строки*/
+  width: 306px;
+  height: 38px;
+  box-sizing: border-box;
 }
 
-.check-in input:hover {
-  background-color: var(--grey-light-double);
+.cld{         /* был DIV  КНОПКИ с SVG  */    /*если эти параметры задать не баттону, а диву - иконка немного смещается !!!*/
+  position: absolute;
+  right: 50px;
+  top: 0px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.check-in input:focus{
+.calendar {            /*BUTTON */
+  border: none;
+  height: 38px;
+  background-color: var(--grey-light);
+}
+
+.calendar-svg { fill: var(--grey-dark); }
+.booking-input:hover { background-color: var(--grey-light-double); }
+.calendar:hover { background-color: var(--grey-light-double); }
+.calendar:hover svg { fill: var(--basic-black); }
+
+.booking-input:focus {                           /* при ФОКУСЕ границы поля и кнопки НЕ СОВПАДАЮТ !!!  */
   background-color: var(--basic-white);
   border: 2px solid var(--grey-light-light);
+  /*box-sizing: content-box;*/
 }
 
-                            /* КАЛЕНДАРЬ */
+.calendar:active { background-color: var(--grey-light-double); }
+.calendar:active svg { fill: var(--blue); }
 
-.calendar-icon {
-  border: none;
-}
-                           /*  ??  */         /*  ??  */
-.svg-path-both {
-  --color-svg-calendar: var(--grey-dark);
-}
-
-.svg-path-both:hover {
-  --color-svg-calendar: var(--extra-red);
-}
-
-.svg-path-both:active {
-  --color-svg-calendar: var(--extra-green);
+.out {
+  margin-top: 29px;
 }
 
 
-
-.check-out {
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 700;
-  /*margin-left: 55px;
-  margin-right: 55px;
-  margin-top: 29px;*/
-}
-
-.check-out input {
-  background-color: var(--grey-light);
-}
-.check-out input:hover {
-    background-color: var(--grey-light-double);
-}
-.check-out input:focus{
-    background-color: var(--basic-white);
-    border: 2px solid var(--grey-light-light);
-}
-
-button.calendar-background {
-  display: block;
-  width: 21px;
-  height: 23px;
-  border: none;
-  text-decoration: none;
-  background-color: var(--grey-light);
-  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/calendar.svg");
-  background-repeat: no-repeat;
-}
-
-button.calendar-background:hover {
-  background-color: var(--grey-light-double);
-  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/calendar_black.svg");
-}
-
-button.calendar-background:active {
-  background-color: var(--basic-white);
-  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/calendar_blue.svg");
-}
+/* ДЕТИ  ВЗРОСЛЫЕ  */
 
 .people-amount {
+  display: flex;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-
- /* margin-left: 55px;
-  margin-right: 55px;
-  margin-top: 30px;*/
 }
 
-.people-amount input{
+
+
+.booking-input-people {
+  width: 114px;
+  height: 38px;
+  color: var(--basic-black);
   background-color: var(--grey-light);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  border: none;
+  display: block;
+  text-align: center;
 }
 
-.people-amount input:link {
-  background-color: var(--grey-light);
+.block-adl {
+  display: flex;
+
 }
 
-.people-amount input:hover {
-  background-color: var(--grey-light-double);
+.block-kid {
+  width: 130px;
+  display: flex;
+  width: auto;
+  padding-right: 0px;
+  /*border: 2px dashed orchid;*/
 }
 
-.people-amount input:focus {
-  background-color: var(--basic-white);
-  border: 2px solid var(--grey-light-light);
+
+.adl {
+  margin-left: 55px;
+  vertical-align: middle;
 }
+
+.kid {
+  width: 65px;
+  margin-left: 40px;
+}
+
+
+/*
+.kids { border: 1px solid orchid; margin-right: 55px; }
+.vzr { border: 1px solid green;}
+.cld { border: 2px solid orange;}
+.booking-label { border: 1px solid var(--blue);}
+.booking-p { border: 1px solid blueviolet;}
+.booking-input-people { border: 1px solid blue; margin-right: 0;}
+.plus { border: 1px solid var(--brown-dark);}
+.minus { border: 1px solid var(--brown-dark);}
+.people-amount { border: 1px solid orchid;}
+.booking { border: 2px solid greenyellow;}
+.booking-date-cld { border: 1px solid var(--extra-green);}
+.booking-input { border: 2px solid yellow;}
+
+.calendar-svg { border: 1px solid  var(--brown)  ;}
+*/
+
+
+
 
 
 .booking-button-find {
-  font-size: 21px;
-  color: var(--basic-white);
-  font-weight: 700;
-  background-color: var(--blue);
-  /*margin-left: 55px;
-  margin-right: 55px;
-  margin-top: 54px;
-  margin-bottom: 55px;
   width: 458px;
   height: 58px;
-  border: none;*/
-}
-
-.button:link {
+  border: none;
+  font-size: 21px;
+  line-height: 27px;
+  font-weight: bold;
+  color: var(--basic-white);
   background-color: var(--blue);
+  text-align: center;
+  margin-top: 54px;
+  margin-left: 55px;
+  display: block;
 }
 
-.button:hover {
-  background-color: var(--blue-double);
-}
+.booking-button-find:hover  { background-color: var(--blue-double); }
+.booking-button-find:active { background-color: var(--blue-dark); opacity: 0.3; }
 
-.button:active {
-  background-color: var(--blue-dark);
-}
 
-/*   КАРТА  */
+
+
+ /*   КАРТА  */
 .map {
   width: 1199px;
   height: 594px;
   top: 2169px;
   left: 1px;
-  background-color: var(--extra-color);
 }
 
 
@@ -601,6 +612,8 @@ input.filter-item-box {
 }
 
 .offer-rating {
+  width: 110px;
+  height: 27px;
   font-size: 14px;
   line-height: 21px;
   color: var(--grey-grey);
@@ -623,36 +636,46 @@ input.filter-item-box {
 
 
 /*   СОЦИАЛЬНЫЕ СЕТИ   */
-.social-icons li {
-  list-style: none;
-  width: 46px;
-  height: 48px;
-  background-color: var(--blue);
- }
-
-a { text-decoration: none; }
-
 
 .visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
   overflow: hidden;
-  position: absolute;
-  clip: rect(0 0 0 0);
-  background-color: var(--blue);   /*возможно нужно будет заменить*/
 }
 
-.social-icons li:hover {
-  background-color: var(--blue-double);
+.social-icons {
+list-style: none;
+display: flex;
+padding: 0;
+margin: 0;
 }
 
-.social-icons li:active {
-  background-color: url("file:///C:/Users/Hp/1596451-sedona-29/img/twitter.svg");
-  fill-opacity: var(--blue-dark);
+.social-icons-item {
+margin-left: 3px;
+margin-right: 3px;
 }
 
+.social-icon-item-link {
+display: flex;
+width: 46px;
+height: 48px;
+align-items: center;
+justify-content: center;
+background-color: var(--blue);
+}
 
-
-
-
+.social-icon-item-link:hover {
+background-color: var(--blue-double);
+}
+.social-icon-item-link:active svg {
+background-color: var(--blue-dark);
+opacity: 0.3;
+}
 
 
 /*   АВТОРСТВО   */
@@ -661,6 +684,6 @@ a { text-decoration: none; }
   line-height: 26px;
 }
 
-.logo-academy { background-color: var(--basic-white); }
-.logo-academy:hover  { fill: var(--blue); }
-.logo-academy:active { fill: var(--grey-smoky); }
+.logo-academy:link svg { fill: var(--anthracite); }
+.logo-academy:hover svg  { fill: var(--blue); }
+.logo-academy:active svg { fill: var(--grey-smoky); }
