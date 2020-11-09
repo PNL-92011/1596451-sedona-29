@@ -33,14 +33,7 @@
 
 /*  GLOBAL  */
 
-.page {
-  height: 100%;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.body {
-  min-height: 100%;
+body {
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -49,9 +42,28 @@
   color: var(--basic-black);
   background-color: var(--basic-white);
   text-transform: uppercase;
-  grid-template-rows: min-content 1fr min-content;
-  box-shadow: 0px 5px 15px red/*var(--back-shadow)*/;
+  margin: 0;
+  padding: 0;
+ }
+
+ a {
+   text-decoration: none;
 }
+
+.page {
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  /*background-color: var(--grey-CACACA);*/
+}
+
+.body {
+  grid-template-rows: min-content 1fr min-content;
+  box-shadow: 0px 5px 15px var(--back-shadow);
+
+  /*outline: 9px dashed var(--black-light);
+  outline-offset: -9px;*/
+ }
 
 .visually-hidden {
   position: absolute !important;
@@ -80,8 +92,6 @@
 }
 
 .site-navigation { list-style: none; }
-
-a { text-decoration: none; }
 
 .menu-item a:link    { color: var(--basic-black); }
 .menu-item a:visited { color: var(--basic-black);  opacity: 0.3; }
@@ -153,15 +163,15 @@ a { text-decoration: none; }
 /*  ---------------   M A I N   --------------  */
 
 .container {
-  width: 1200px;
-  margin:  0;
+  margin:  0 auto;
   padding: 0;
 
+  /*outline: 5px dotted blue;
+  outline-offset: -5px;*/
 }
 
 .big-photo {
-  width: 1200px;
-  height: 509px;
+ height: 509px;
 }
 
 .big-photo {
@@ -173,8 +183,17 @@ a { text-decoration: none; }
   width: 100%;
   height: 57px;
   margin-top: -56px;
-     /*outline: 1px solid red;
+      /*outline: 1px solid red;
     outline-offset: -1px;*/
+}
+
+.lettering {
+  width: 457px;
+  height: 355px;
+  margin-top: -433px;
+  margin-left: 371px;
+  /*outline: 2px solid red;
+  outline-offset: -2px;*/
 }
 
 
@@ -183,39 +202,34 @@ a { text-decoration: none; }
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin-top: 124px;
+  padding: 0;
+  /*outline: 3px solid skyblue;
+  outline-offset: -3px;*/
 }
 
 .subtitle {
   font-size: 14px;
   line-height: 26px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  /*outline: 3px solid blue;
+  outline-offset: -3px;*/
 }
 
 
 .main-slogan {
   display: grid;
   margin: 0;
-  /*height: 216px;*/
+  padding: 0;
   grid-template-rows: 1fr;
   justify-content: center;
   text-align: center;
-  padding-top: 48px;
-  /*outline: 3px solid green;
-  outline-offset: -3px;*/
+
+  /*outline: 4px solid green;
+  outline-offset: -4px;*/
 }
 
-.main-title {
-  margin: 0;
-  padding: 0;
-  /*outline: 3px solid red;
-  outline-offset: -3px;*/
-}
-
-.subtitle {
-  margin-top: 40px;
-  margin-bottom: 50px;
-  /*outline: 3px solid blue;
-  outline-offset: -3px;*/
-}
 
 
 
@@ -480,6 +494,7 @@ a { text-decoration: none; }
   padding-bottom: 1px;*/
   position: absolute;
   background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px var(--back-shadow);
 }
 
 /*  ДАТА  ЗАЕЗДА  */
@@ -511,6 +526,9 @@ a { text-decoration: none; }
   height: 38px;
   box-sizing: border-box;
   padding-left: 13px;
+
+  /*outline: 2px solid red;
+  outline-offset: -2px;*/
 }
 
 .cld{
@@ -519,6 +537,9 @@ a { text-decoration: none; }
   top: 0px;
   width: 38px;
   height: 38px;
+
+  /*outline: 1px solid blue;
+  outline-offset: -1px;*/
 }
 
 .calendar {
@@ -526,25 +547,48 @@ a { text-decoration: none; }
   height: 38px;
   border: none;
   text-decoration: none;
+
+  /*outline: 3px dashed green;
+  outline-offset: -3px;*/
 }
 
-.calendar-svg { fill: var(--grey-dark); }
-.booking-input:hover { background-color: var(--grey-light-double); }
-.calendar:hover { background-color: var(--grey-light-double); }
-.calendar:hover svg { fill: var(--basic-black); }
+.calendar-svg {
+  fill: var(--grey-dark);
+}
+
+.booking-input:hover {
+  background-color: var(--grey-light-double);
+}
+
+.calendar:hover {
+  background-color: var(--grey-light-double);
+}
+
+.calendar:hover svg {
+  fill: var(--basic-black);
+}
 
 .booking-input:focus {
   background-color: var(--basic-white);
   border: 2px solid var(--grey-light-light);
 }
-.calendar:active { background-color: var(--grey-light-double); }
-.calendar:active svg { fill: var(--blue); }
+
+.calendar:active {
+  background-color: var(--grey-light-double);
+}
+
+.calendar:active svg { fill: var(--blue);
+}
 
 
 
-.out .booking-date-cld { margin-left: 20px; }
+.out .booking-date-cld {
+  margin-left: 20px;
+}
 
-.out { margin-top: 29px; }
+.out {
+  margin-top: 29px;
+}
 
 
 /* ДЕТИ  ВЗРОСЛЫЕ  */
@@ -560,6 +604,7 @@ a { text-decoration: none; }
   justify-content: start;
   margin-left: 55px;
   margin-left: 55px;
+
   /*outline: 2px solid skyblue;
   outline-offset: -2px;*/
 }
@@ -575,11 +620,149 @@ a { text-decoration: none; }
   border: none;
   margin-left: 38px;
   text-align: center;
+
+  /*outline: 2px solid red;
+  outline-offset: -2px;*/
+}
+
+.block-adl {
+  position: relative;
+}
+
+/*  минус */
+.cld-minus {
+  position: absolute;
+  top: 0px;
+  left: 115px;
+  width: 37px;
+  height: 40px;
+
+  /*outline: 1px solid blue;
+  outline-offset: -1px;*/
+}
+
+.button-minus {
+  background-color: var(--grey-light);
+  margin-top: 0px;
+  width: 40px;
+  height: 35px;
+  text-decoration: none;
+  border: none;
+
+  /*outline: 3px dashed green;
+  outline-offset: -3px;*/
+}
+
+.cld-minus-svg {
+  fill: var(--grey-dark);
+  text-align: center;
 }
 
 
+/* наведение */
+.booking-input-people:hover {
+  background-color: var(--grey-light);
+}
+
+.button-minus:hover {
+background-color: var(--grey-light);
+}
+
+.button-minus:hover svg {
+  fill: var(--basic-black);
+}
+
+
+
+/* нажатие */
+
+.booking-input-people:active {
+  background-color: var(--grey-light);
+}
+
+.button-minus:active {
+background-color: var(--grey-light);
+}
+
+.button-minus:active svg {
+  fill: var(--blue);
+}
+
+
+
+
+
+
+/*  плюс */
+.cld-plus {
+  position: absolute;
+  top: 0px;
+  left: 188px;
+  width: 40px;
+  height: 37px;
+
+  /*outline: 1px solid blue;
+  outline-offset: -1px;*/
+}
+
+.button-plus {
+  background-color: var(--grey-light);
+  margin-top: 0px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  border: none;
+
+  /*outline: 3px dashed green;
+  outline-offset: -3px;*/
+}
+
+.cld-plus-svg {
+  fill: var(--grey-dark);
+  text-align: center;
+}
+
+
+/* наведение */
+.booking-input-people:hover {
+  background-color: var(--grey-light);
+}
+
+.button-plus:hover {
+background-color: var(--grey-light);
+}
+
+.button-plus:hover svg {
+  fill: var(--basic-black);
+}
+
+
+
+/* нажатие */
+
+.booking-input-people:active {
+  background-color: var(--grey-light);
+}
+
+.button-plus:active {
+background-color: var(--grey-light);
+}
+
+.button-plus:active svg {
+  fill: var(--blue);
+}
+
+
+
+
+
+
+
+/*  KIDS  */
+
 .block-kid {
   margin-left: 44px ;
+  position: relative;
 }
 
 .block-kid .booking-input-people {
@@ -587,7 +770,132 @@ a { text-decoration: none; }
 }
 
 
+/*  минус */
+.cld-minus-kid {
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  width: 37px;
+  height: 38px;
 
+  /*outline: 1px solid blue;
+  outline-offset: -1px;*/
+}
+
+.button-minus-kid {
+  background-color: var(--grey-light);
+  margin-top: 0px;
+  width: 40px;
+  height: 35px;
+  text-decoration: none;
+  border: none;
+
+ /* outline: 3px dashed green;
+  outline-offset: -3px;*/
+}
+
+.cld-minus-svg-kid {
+  fill: var(--grey-dark);
+  text-align: center;
+}
+
+
+/* наведение */
+.booking-input-people:hover {
+  background-color: var(--grey-light);
+}
+
+.button-minus-kid:hover {
+background-color: var(--grey-light);
+}
+
+.button-minus-kid:hover svg {
+  fill: var(--basic-black);
+}
+
+
+
+/* нажатие */
+
+.booking-input-people:active {
+  background-color: var(--grey-light);
+}
+
+.button-minus-kid:active {
+background-color: var(--grey-light);
+}
+
+.button-minus-kid:active svg {
+  fill: var(--blue);
+}
+
+
+
+
+
+
+/*  плюс */
+.cld-plus-kid {
+  position: absolute;
+  top: 0px;
+  left: 144px;
+  width: 40px;
+  height: 37px;
+
+  /*outline: 1px solid blue;
+  outline-offset: -1px;*/
+}
+
+.button-plus-kid {
+  background-color: var(--grey-light);
+  margin-top: 0px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  border: none;
+
+  /*outline: 3px dashed green;
+  outline-offset: -3px;*/
+}
+
+.cld-plus-svg-kid {
+  fill: var(--grey-dark);
+  text-align: center;
+}
+
+
+/* наведение */
+.booking-input-people:hover {
+  background-color: var(--grey-light);
+}
+
+.button-plus-kid:hover {
+background-color: var(--grey-light);
+}
+
+.button-plus-kid:hover svg {
+  fill: var(--basic-black);
+}
+
+
+
+/* нажатие */
+
+.booking-input-people:active {
+  background-color: var(--grey-light);
+}
+
+.button-plus-kid:active {
+background-color: var(--grey-light);
+}
+
+.button-plus-kid:active svg {
+  fill: var(--blue);
+}
+
+
+
+/*  НАЙТИ  */
 .booking-button-find {
   display: block;
   width: 458px;
@@ -621,22 +929,40 @@ a { text-decoration: none; }
 
 /* *********************************       HOTEL       ****************************** */
 
+/*  BODY  */
+.hotels {
+  grid-template-rows: min-content 1fr min-content;
+  box-shadow: 0px 5px 15px green /*var(--back-shadow)*/;
 
+  outline: 9px dashed var(--black-light);
+  outline-offset: -9px;
+}
 
-
-
+/*  MAIN  */
 .main-hotel {
-  width: 1054px;
+  /*height: 100%;
+    width: 1054px;
+  padding: 0 73px;
+  /*width: 1054px;
   margin: 0 73px;
   outline: 2px dashed var(--black-light);
-  outline-offset: -2px
-  }
+  outline-offset: -2px*/
+
+
+  width: 1054px;
+
+  outline: 5px dotted blue;
+  outline-offset: -5px;
+
+
+}
 
 .temporarily {
   width: 1200px;
   margin: 0 auto;
   margin-left: -73px;
-  background-color: var(--grey-dark);
+  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/IMG_9190.jpg");
+  background-repeat: repeat;
 }
 
 .hotel-form {
@@ -858,10 +1184,22 @@ a { text-decoration: none; }
 
 .var {
   display: flex;
-  width: 1054px;
-  /*outline: 4px dashed red;
+  width: 1200px;  /*убрала width: 1054px; */
+/*margin-left: 73px;  /*добавила */ /*нижняя АМАРА под границей и на нужном месте */
+  /*усли убрать отступ - нижняя АМАРА под границей и вплотную к левому краю */
+  outline: 4px dashed red;
   outline-offset: -4px;*/
 }
+
+.var-222 {
+  display: flex;
+  width: 1054px;
+  margin: 0 73px;
+
+  outline: 4px dashed seagreen;
+  outline-offset: -4px;*/
+}
+
 
 .img-amara {
 width: 135px;
@@ -1031,8 +1369,8 @@ padding: 0;
   position: absolute;
 
 
-/*outline: 3px dashed red;
-outline-offset: -3px;*/
+/*outline: 1px solid seagreen;
+outline-offset: -1px;*/
 }
 
 /*  КОНТАНКТЫ  */

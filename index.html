@@ -28,11 +28,11 @@
       </nav>
     </header>
 
-
     <main class="container">
 
-      <div class="big-photo"> <img class="main-photo" src="img/background photo (1).png" width="1200" height="509"alt="картинка <WELCOM to the gorgeous SEDONA> "> </div>
-      <div class="mask"> <img class="photo-mask" src="img/MASK.svg" alt="декор к фото Седоны">  </div>
+      <div class="big-photo"> <img class="main-photo" src="img/background_photo.png" width="1200" height="509"alt="картинка <WELCOM to the gorgeous SEDONA> "> </div>
+      <div class="mask"> <img class="photo-mask" src="img/mask.svg" alt="декор к фото Седоны">  </div>
+      <div class="lettering"> <img class="main-photo-lettering" src="img/welcome.svg" alt="надпись на фото Седоны">  </div>
 
       <section class="main-slogan">
         <h1 class="main-title"> СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ,<br>
@@ -57,7 +57,7 @@
           <ul class="features-list">
           <li class="features-item">
             <div class="features-item-text">
-            <img class="icon" src="icon_home.svg" width="75" height="72" alt="иконка жилье">
+            <img class="icon" src="img/icon_home.svg" width="75" height="72" alt="иконка жилье">
             <p class="features-item-name">ЖИЛЬЕ</p>
             <p class="features-description-black">Рукомендуем пожить в настоящем<br> мотеле, все как в кино!</p>
             </div>
@@ -65,13 +65,13 @@
 
           <li class="features-item">
             <div class="features-item-text">
-            <img class="icon" src="icon_burger.svg" width="75" height="70" alt="иконка еда">
+            <img class="icon" src="img/icon_burger.svg" width="75" height="70" alt="иконка еда">
             <p class="features-item-name">ЕДА</p>
             <p class="features-description-black">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
           </li>
 
           <li class="features-item">
-            <img class="icon" src="icon_gift.svg" width="64" height="77" alt="иконка сувениры">
+            <img class="icon" src="img/icon_gift.svg" width="64" height="77" alt="иконка сувениры">
             <p class="features-item-name">СУВЕНИРЫ</p>
             <p class="features-description-black">Не только китайского, но и местного <br> производства!</p> </div>
           </li>
@@ -115,8 +115,7 @@
           </div>
       </section>
 
-
-      <section>
+     <section>
         <h2 class="visually-hidden">  ПРИЗЫВ К БРОНИ  </h2>
           <div class="common">
 
@@ -162,14 +161,49 @@
                   </div>
 
                   <div class="people-amount">
+
                     <div class="block-adl">
                       <label class="booking-label adl" for="adults">ВЗРОСЛЫЕ:</label>
                       <input class="booking-input-people" type="text" id="adults" name="adults-nbr" value="2">
+
+                      <div class="cld-minus">
+                        <button class="button-minus">
+                          <svg class="cld-minus-svg" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="3">
+                            </svg>
+                        </button>
+                      </div>
+
+                      <div class="cld-plus">
+                        <button class="button-plus">
+                          <svg class="cld-plus-svg" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
+                           </svg>
+                        </button>
+                      </div>
                     </div>
+
                     <div class="block-kid">
                       <label class="booking-label kid" for="children">ДЕТИ:</label>
                       <input class="booking-input-people" type="text" id="children" name="children-nbr" value="0">
-                    </div>
+
+                      <div class="cld-minus-kid">
+                        <button class="button-minus-kid">
+                          <svg class="cld-minus-svg-kid" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="12" height="3">
+                            </svg>
+                        </button>
+                      </div>
+
+                      <div class="cld-plus-kid">
+                        <button class="button-plus-kid">
+                          <svg class="cld-plus-svg-kid" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
+                           </svg>
+                        </button>
+                      </div>
+
+                     </div>
                   </div>
 
                   <button class="booking-button-find" type="submit">НАЙТИ</button>
@@ -221,10 +255,10 @@
         </a>
       </div>
       </section>
-    </div>
+     </div>
     </footer>
 
-  </body>
+   </body>
   </html>
 
 
