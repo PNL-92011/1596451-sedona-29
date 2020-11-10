@@ -28,12 +28,14 @@
   --extra-blue: #1a1dff;         /*временно, для самопроверки*/
   --background-footer: rgba(255, 255, 255, 0.9);
   --back: #888888;                /* фон за страницей */
+  --shadow-range: #ABABAB;        /* тень бегунка */
 
 }
 
 /*  GLOBAL  */
 
 body {
+  width: 1200px;
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -42,7 +44,7 @@ body {
   color: var(--basic-black);
   background-color: var(--basic-white);
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
  }
 
@@ -52,16 +54,18 @@ body {
 
 .page {
   height: 100%;
-  width: 1200px;
   margin: 0 auto;
-  /*background-color: var(--grey-CACACA);*/
+
+  background-color: var(--grey-CACACA);*/
 }
 
 .body {
   grid-template-rows: min-content 1fr min-content;
   box-shadow: 0px 5px 15px var(--back-shadow);
 
-  /*outline: 9px dashed var(--black-light);
+  margin-top: 50px;
+
+ /*outline: 9px dashed var(--black-light);
   outline-offset: -9px;*/
  }
 
@@ -92,6 +96,13 @@ body {
 }
 
 .site-navigation { list-style: none; }
+
+.menu-item {
+
+  display: block;
+  /*outline: 1px solid green;
+    outline-offset: -1px;*/
+}
 
 .menu-item a:link    { color: var(--basic-black); }
 .menu-item a:visited { color: var(--basic-black);  opacity: 0.3; }
@@ -166,8 +177,8 @@ body {
   margin:  0 auto;
   padding: 0;
 
-  /*outline: 5px dotted blue;
-  outline-offset: -5px;*/
+  /*outline: 7px dotted blue;
+  outline-offset: -7px;*/
 }
 
 .big-photo {
@@ -754,10 +765,6 @@ background-color: var(--grey-light);
 
 
 
-
-
-
-
 /*  KIDS  */
 
 .block-kid {
@@ -830,10 +837,6 @@ background-color: var(--grey-light);
 }
 
 
-
-
-
-
 /*  плюс */
 .cld-plus-kid {
   position: absolute;
@@ -878,7 +881,6 @@ background-color: var(--grey-light);
 }
 
 
-
 /* нажатие */
 
 .booking-input-people:active {
@@ -892,7 +894,6 @@ background-color: var(--grey-light);
 .button-plus-kid:active svg {
   fill: var(--blue);
 }
-
 
 
 /*  НАЙТИ  */
@@ -931,38 +932,25 @@ background-color: var(--grey-light);
 
 /*  BODY  */
 .hotels {
-  grid-template-rows: min-content 1fr min-content;
-  box-shadow: 0px 5px 15px green /*var(--back-shadow)*/;
+  /*box-shadow: 0px 5px 15px red /*var(--back-shadow); */
 
-  outline: 9px dashed var(--black-light);
-  outline-offset: -9px;
+  /*outline: 9px dashed green;
+  outline-offset: -9px;*/
 }
 
 /*  MAIN  */
-.main-hotel {
-  /*height: 100%;
-    width: 1054px;
-  padding: 0 73px;
-  /*width: 1054px;
-  margin: 0 73px;
-  outline: 2px dashed var(--black-light);
-  outline-offset: -2px*/
+.container-hotel {
 
-
-  width: 1054px;
-
-  outline: 5px dotted blue;
-  outline-offset: -5px;
-
+  /*outline: 5px dotted blue;
+  outline-offset: -5px;*/
 
 }
 
 .temporarily {
-  width: 1200px;
   margin: 0 auto;
-  margin-left: -73px;
-  background-image: url("file:///C:/Users/Hp/1596451-sedona-29/img/IMG_9190.jpg");
-  background-repeat: repeat;
+
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
 }
 
 .hotel-form {
@@ -978,9 +966,6 @@ background-color: var(--grey-light);
 
 .left {
   display: flex;
-  /*outline: 7px dotted rgb(138, 30, 66);
-  outline-offset: -7px;
-  /*width: 410px;*/
   padding-top: 30px;
 }
 
@@ -988,9 +973,8 @@ background-color: var(--grey-light);
   font-size: 16px;
   color: var(--basic-white);
   font-weight: 400;
-  /*outline: 2px solid green;
+  /*outline: 5px solid green;
   outline-offset: -2px;*/
-
 }
 
 .filter-group-title {
@@ -1013,20 +997,9 @@ background-color: var(--grey-light);
   margin-top: 22px;
 }
 
-.type { margin-left: 119px; }
-
-.rght {
-  display: flex;
-  flex-direction: column;
-  /*outline: 1px solid blue;
-  outline-offset: -1px;*/
-  width: 317px;
-  padding-top: 30px;
-  align-items: center;
+.type-living {
+  margin-left: 119px;
 }
-
-.rght span { align-self: flex-start; margin-bottom: 16px;}
-
 
 .filter-item {
   display: flex;
@@ -1048,21 +1021,125 @@ background-color: var(--grey-light);
   fill: var(--grey-dirty);
 }
 
-.filter-price {
-  color: var(--basic-white);
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
-  background-color: var(--blue); /* временно, пока нет фона */
-  text-align: center;
+
+
+
+/* БЕГУНКИ  */
+
+.rght {
+  display: flex;
+  flex-direction: column;
+  width: 317px;
+  padding-top: 30px;
+  align-items: center;
 }
 
-.from-till { display: flex;  width: 317px; }
-.from { width: 153px; height: 20px; }
-.till { width: 150px; height: 20px; margin-left: 2px; }
+/*fieldset*/
+.bgn {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
-.ovals { display: flex; margin-top: 20px; }
+.range-filter {
+  margin-top: 20px;
+}
+
+.range-controls {
+  position: relative;
+
+}
+
+.range-controls .scale {
+  width: 316px;
+  height: 2px;
+  background-color: var(--basic-white);
+  opacity: 0.3;
+  margin-top: 20px;
+}
 
 
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--shadow-range)  ;
+  border-radius: 50%;
+  top: -9px;
+  left: 0px;
+  z-index: 1;
+}
+
+.range-controls .shadow {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--shadow-range)  ;
+  background-color: var(--shadow-range)  ;
+  opacity: 0.3;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.range-controls .toggle-max {
+  left: 240px;
+}
+
+.range-controls .shadow-min {
+  margin-top: 2px;
+}
+.range-controls .shadow-max {
+  margin-top: 2px;
+}
+
+
+.from-till {
+  display: flex;
+  width: 317px;
+  justify-content: space-between;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  position: relative;
+}
+
+.min-price {
+  font-size: 14px;
+  line-height: 21px;
+  width: 70px;
+  height: 36px;
+  margin-left: 65px;
+  /*outline: 1px solid red;
+  outline-offset: -1px;*/
+}
+
+
+.max-price {
+  font-size: 14px;
+  line-height: 21px;
+  width: 70px;
+  height: 36px;
+  margin-right: 35px;
+  /*outline: 1px solid wheat;
+  outline-offset: -1px;*/
+}
+
+ /*  input  */
+ .filter-price {
+  width: 40px;
+  height: 36px;
+  color: var(--basic-white);
+  border: none;
+  text-align: left;
+  background-color: var(--blue);  /* сделать прозрачным */
+}
 
 .filter-price-button {
   color: var(--basic-white);
@@ -1073,7 +1150,8 @@ background-color: var(--grey-light);
   background-color: var(--blue);  /* кнопка д.б. прозрачной*/
   width: 137px;
   height: 36px;
-   /*text-decoration: none;*/
+  margin-top: 33px;
+
 }
 
 .filter-price-button:link {
@@ -1085,22 +1163,41 @@ background-color: var(--grey-light);
   background-color: var(--basic-white);
 }
 
+.stick {
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+  position: absolute;
+  top: 7px;
+  left: 157px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .sort {
   font-size: 12px;
   line-height: 18px;
   display: flex;
   justify-content: space-between;
-  outline: 1px solid blue;
-  outline-offset: -1px;
   height: 86px;
-  width: 100%;
-  /*margin-bottom: 30px;*/
+  /*   outline: 3px solid blue;
+  outline-offset: -3px;*/
 }
 
 .sort-sort {
   display: flex;
-
-  /*outline: 5px dotted red;
+  margin-left: 73px;
+  /*outline: 5px dotted green;
   outline-offset: -5px;*/
 }
 
@@ -1140,9 +1237,10 @@ background-color: var(--grey-light);
 .up-down {
   display: flex;
   align-items: center;
-  margin-right: 0px;
- /*outline: 1px solid green;
-  outline-offset: -1px;*/
+  margin-right: 73px;
+
+  /*outline: 5px dotted green;
+  outline-offset: -5px;*/
 }
 
 .sorting-icon-current {
@@ -1184,28 +1282,25 @@ background-color: var(--grey-light);
 
 .var {
   display: flex;
-  width: 1200px;  /*убрала width: 1054px; */
-/*margin-left: 73px;  /*добавила */ /*нижняя АМАРА под границей и на нужном месте */
-  /*усли убрать отступ - нижняя АМАРА под границей и вплотную к левому краю */
-  outline: 4px dashed red;
-  outline-offset: -4px;*/
+  justify-content: space-between;
+
+
+  /*outline: 3px solid var(--brown-dark);
+  outline-offset: -3px;*/
 }
 
-.var-222 {
+.img-var-info {
   display: flex;
-  width: 1054px;
-  margin: 0 73px;
-
-  outline: 4px dashed seagreen;
-  outline-offset: -4px;*/
 }
 
-
-.img-amara {
+.var-photo {
 width: 135px;
 height: 90px;
 margin: 30px 0;
+margin-left: 73px;
 padding: 0;
+/*outline: 1px solid blue;
+  outline-offset: -1px;*/
 }
 
 /*  AMARA RESORT & SPA */
@@ -1215,8 +1310,8 @@ padding: 0;
   height: 92px;
   margin-left: 30px;
   margin-top: 24px;
-  /*outline: 1px solid green;
-  outline-offset: -1px;*/
+  /*outline: 2px solid red;
+  outline-offset: -2px;*/
 }
 
 .offer-name-place {
@@ -1250,6 +1345,10 @@ padding: 0;
 
 .rub {
   margin-left: 35px;
+}
+
+.mot {
+  margin-left: 60px;
 }
 
 /*  ПОДРОБНЕЕ  ЗАБРОНИРОВАТЬ  */
@@ -1310,14 +1409,13 @@ padding: 0;
 
 /* STARS */
 .stars-rating {
-  display: block;
   width: 110px;
   height: 92px;
   margin-top: 28px;
-  margin-right: 0px;
-  margin-left: 520px;   /* @ @ @ @ @ @ !!! */
+  margin-right: 73px;
+  margin-left: 0px;
     /*outline: 1px solid blue;
-  outline-offset: -1px;*/
+      outline-offset: -1px;*/
 }
 
 .stars {
@@ -1342,16 +1440,15 @@ padding: 0;
   background-color: var(--grey-light);
 }
 
-
-/*.var-info-rating {
-  display: flex;
-  justify-content: space-between;
-}/*
-
-
-.delete {
-  margin-top: 300px;
+.appart{
+  margin-bottom: 160px;
 }
+
+
+
+
+
+
 
 
 /*   -----------------------------        ПОДВАЛ       -------------------------------   */
@@ -1369,9 +1466,20 @@ padding: 0;
   position: absolute;
 
 
-/*outline: 1px solid seagreen;
-outline-offset: -1px;*/
+/*outline: 5px dashed seagreen;
+outline-offset: -5px;*/
 }
+
+/* подвал второй страницы */
+.inner {
+  margin-top: -130px;
+
+  /*outline: 4px solid seagreen;
+  outline-offset: -4px;*/
+}
+
+
+
 
 /*  КОНТАНКТЫ  */
 .footer-contacts {
