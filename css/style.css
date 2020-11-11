@@ -56,7 +56,7 @@ body {
 
 .body {
   grid-template-rows: min-content 1fr min-content;
-  box-shadow: 0px 5px 15px  red  /*var(--back-shadow)*/  ;
+  box-shadow: 0px 5px 15px var(--back-shadow);
  }
 
 .visually-hidden {
@@ -1211,7 +1211,6 @@ background-color: var(--grey-light);
   height: 1px;
   background:  var(--grey-light-light) ;
 }
-
 
 /*В А Р И А Н Т Ы  */
 
