@@ -60,13 +60,13 @@ body {
  }
 
 .visually-hidden {
-  position: absolute !important;
+  position: absolute
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
-  padding:0 !important;
-  border:0 !important;
-  height: 1px !important;
-  width: 1px !important;
+  padding:0
+  border:0
+  height: 1px
+  width: 1px
   overflow: hidden;
 }
 
@@ -118,6 +118,10 @@ body {
   position: relative;
 }
 
+.main-navigatin-wrapper-wrapper {
+  display: flex;
+}
+
 /*  ЛОГОТИП  */
 .header-logo {
   width: 138px;
@@ -134,6 +138,7 @@ body {
   margin:  0;
   padding: 0;
   display: flex;
+  align-items: center;
 }
 
 .menu-item-left {
@@ -160,6 +165,11 @@ body {
   flex-wrap: wrap;
 }
 
+.rig {
+  justify-content: flex-end;
+}
+
+
 .menu-item-left li:nth-child(1) {
   margin-left:  72px;
 }
@@ -170,11 +180,12 @@ body {
 
 .menu-item-right li:nth-child(1) {
    margin-right: 147px;
-  }
-
-.menu-item-right li:nth-child(2) {
-  margin-right:  72px;
 }
+
+.menu-item-right .rig li:nth-child(2) {
+  margin-right:  73px;
+}
+
 
 
 /*  ---------------   M A I N   --------------  */
@@ -937,7 +948,7 @@ background-color: var(--grey-light);
   height: 23px;
   margin-left: -23px;
   padding: 0;
- visibility: hidden;*/
+  visibility: hidden;
   /*outline: 2px solid red;
   outline-offset: -2px;*/
 }
@@ -945,10 +956,9 @@ background-color: var(--grey-light);
 .filter-item::before {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 23px;
   height: 23px;
-  /*outline: 2px solid greenyellow;
-  outline-offset: -2px*/
  }
 
 .check-box {
